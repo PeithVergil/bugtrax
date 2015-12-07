@@ -11,3 +11,6 @@ from .base import *
 
 # See: https://docs.djangoproject.com/en/1.9/ref/settings/#debug
 DEBUG = True
+
+# Disable password validation.
+AUTH_PASSWORD_VALIDATORS = []
