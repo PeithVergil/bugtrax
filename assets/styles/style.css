@@ -1,0 +1,51 @@
+body {
+    padding-top: 5rem;
+}
+
+.starter-template {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+#todo-list .todo-item {
+    border-bottom: 1px solid #cdcdcd;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+#todo-list .todo-item:last-child {
+    border-bottom: none;
+}
+
+#todo-list .inner {
+    position: relative;
+}
+
+#todo-list .title.done {
+    text-decoration: line-through;
+}
+
+#todo-list .checkbox {
+    margin-bottom: 0;
+}
+
+#todo-list .controls {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#todo-list .btn {
+    font-size: 0.6rem;
+    padding-bottom: 0.1rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    padding-top: 0.1rem;
+    text-transform: uppercase;
+}
