@@ -38,6 +38,7 @@ INSTALLED_APPS = [
 
 # Local apps
 INSTALLED_APPS += [
+    'accounts',
 ]
 
 MIDDLEWARE_CLASSES = [
