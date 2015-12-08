@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="jumbotron">
+                <h1 class="display-1">
+                    {{ object.title }}
+                </h1>
+                
+                <p class="lead">
+                    {{ object.description }}
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <strong>Owner: </strong> {{ object.owner }}
+                </div>
+                <div class="col-md-4">
+                    <strong>Date: </strong> {{ object.date|date:"M d, Y" }}
+                </div>
+                <div class="col-md-4">
+                    <strong>State: </strong> {{ object.get_state_display }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

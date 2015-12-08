@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if object_list %}
+        <h1>All Bugs</h1>
+        
+        <div class="list-group">
+            {% for object in object_list %}
+                <a href="{{ object.get_absolute_url }}" class="list-group-item">
+                    {{ object.title }}
+
+                    <span class="label label-default label-pill pull-right">
+                        {{ object.get_state_display }}
+                    </span>
+                </a>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="jumbotron">
+            <h1 class="display-3">No bugs!</h1>
+
+            <p class="lead">
+                There are currently no bugs in the bug tracker. To report a new bug, please click on the button below.
+            </p>
+            
+            <hr class="m-y-md">
+            
+            <p class="lead">
+                <a href="{% url 'bugs:create' %}" role="button" class="btn btn-primary btn-lg">
+                    Report New Bug
+                </a>
+            </p>
+        </div>
+    {% endif %}
+{% endblock %}
