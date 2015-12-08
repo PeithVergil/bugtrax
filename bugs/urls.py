@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from .views import BugListView, BugCreateView, BugDetailView
+from .views import BugListView, BugCreateView, BugDetailView, BugUpdateView
 
 
 urlpatterns = [
@@ -15,4 +15,8 @@ urlpatterns = [
     url(r'^(?P<pk>\d+)/detail/$',
         BugDetailView.as_view(),
         name='detail'),
+
+    url(r'^(?P<pk>\d+)/update/$',
+        BugUpdateView.as_view(),
+        name='update'),
 ]

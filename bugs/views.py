@@ -1,5 +1,5 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic import CreateView, DetailView, ListView
+from django.views.generic import CreateView, UpdateView, DetailView, ListView
 
 from .forms import BugForm
 from .models import Bug
@@ -19,3 +19,7 @@ class BugCreateView(BugViewMixin, CreateView):
 
 class BugDetailView(BugViewMixin, DetailView):
     pass
+
+
+class BugUpdateView(BugViewMixin, UpdateView):
+    form_class = BugForm
