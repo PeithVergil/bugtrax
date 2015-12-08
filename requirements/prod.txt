@@ -1,0 +1,5 @@
+# Dependencies for the production environment.
+
+-r base.txt
+
+gunicorn==19.4.1
