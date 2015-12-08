@@ -39,6 +39,7 @@ INSTALLED_APPS = [
 # Local apps
 INSTALLED_APPS += [
     'accounts',
+    'bugs',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -132,3 +133,11 @@ STATIC_ROOT = root('static')
 STATICFILES_DIRS = (
     root('assets'),
 )
+
+# Authentication
+# https://docs.djangoproject.com/en/1.9/ref/settings/#auth
+
+LOGIN_URL = 'accounts:login'
+LOGOUT_URL = 'accounts:logout'
+
+LOGIN_REDIRECT_URL = 'bugs:list'
