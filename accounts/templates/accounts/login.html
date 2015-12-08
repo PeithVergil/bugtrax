@@ -4,6 +4,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
+                {% if form.errors %}
+                    {% for error in form.errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                {% endif %}
+
                 <form method="post" action="{% url 'accounts:login' %}">
                     {% csrf_token %}
 
@@ -19,11 +25,15 @@
                         <label for="{{ form.password.id_for_label }}" class="control-label">
                             {{ form.password.label }}
                         </label>
-                        <input type="text" id="{{ form.password.id_for_label }}" name="{{ form.password.html_name }}" class="form-control">
+                        <input type="password" id="{{ form.password.id_for_label }}" name="{{ form.password.html_name }}" class="form-control">
                         {{ form.password.errors }}
                     </fieldset>
 
                     <button type="submit" class="btn btn-block btn-primary">Login</button>
+
+                    {% if next %}
+                        <input type="hidden" name="next" value="{{ next }}" />
+                    {% endif %}
                 </form>
             </div>
         </div>
