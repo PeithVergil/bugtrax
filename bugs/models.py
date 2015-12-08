@@ -11,7 +11,7 @@ class Bug(models.Model):
 
     STATE_OPEN = 1
     STATE_CLOSED = 2
-    STATE_ASSIGNED = 2
+    STATE_ASSIGNED = 3
 
     STATE_CHOICES = (
         (STATE_OPEN, 'Open'),
