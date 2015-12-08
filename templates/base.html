@@ -37,11 +37,20 @@
                     </ul>
 
                     <ul class="nav navbar-nav pull-right">
+                        {% if user.is_authenticated %}
+                            <li class="nav-item">
+                                <a href="javascript:;" class="nav-link">
+                                    Welcome, {{ user }}!
+                                </a>
+                            </li>
+                        {% endif %}
+
                         <li class="nav-item">
                             <a href="{% url 'bugs:create' %}" class="btn btn-success">
                                 Report New Bug
                             </a>
                         </li>
+
                         {% if user.is_authenticated %}
                             <li class="nav-item">
                                 <a href="{% url 'accounts:logout' %}" class="btn btn-danger-outline">
