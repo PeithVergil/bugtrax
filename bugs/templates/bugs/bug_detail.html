@@ -17,6 +17,14 @@
                 <p class="lead">
                     {{ object.description }}
                 </p>
+
+                <p class="lead">
+                    <strong>Severity:</strong> 
+                    
+                    <span class="label label-{% if object.danger %}danger{% else %}warning{% endif %}">
+                        {{ object.get_severity_display }}
+                    </span>
+                </p>
             </div>
 
             <div class="row">

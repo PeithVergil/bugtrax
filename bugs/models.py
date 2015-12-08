@@ -46,5 +46,9 @@ class Bug(models.Model):
     # Date the bug was created.
     date = models.DateTimeField(auto_now_add=True)
 
+    @property
+    def danger(self):
+        return self.severity in [self.SEVERITY_HIGH, self.SEVERITY_CRITICAL]
+
     def get_absolute_url(self):
         return reverse('bugs:detail', args=(self.id,))
