@@ -22,6 +22,7 @@ Clone the repository.
 
 ```bash
 hg clone ssh://hg@bitbucket.org/pvergil/bugtrax
+cd bugtrax
 ```
 
 Run migrations.
