@@ -42,6 +42,13 @@
                                 Report New Bug
                             </a>
                         </li>
+                        {% if user.is_authenticated %}
+                            <li class="nav-item">
+                                <a href="{% url 'accounts:logout' %}" class="btn btn-danger-outline">
+                                    Logout
+                                </a>
+                            </li>
+                        {% endif %}
                     </ul>
                 </nav>
             </div>
