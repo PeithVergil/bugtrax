@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 INSTALLED_APPS += [
     'accounts',
     'bugs',
+    'home',
 ]
 
 MIDDLEWARE_CLASSES = [
