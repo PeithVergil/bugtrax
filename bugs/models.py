@@ -23,6 +23,24 @@ class Bug(models.Model):
                                      choices=STATE_CHOICES,
                                      default=STATE_OPEN)
 
+    SEVERITY_LOW = 1
+    SEVERITY_MEDIUM = 2
+    SEVERITY_HIGH = 3
+    SEVERITY_TRIVIAL = 4
+    SEVERITY_CRITICAL = 5
+
+    SEVERITY_CHOICES = (
+        (SEVERITY_LOW, 'Low'),
+        (SEVERITY_MEDIUM, 'Medium'),
+        (SEVERITY_HIGH, 'High'),
+        (SEVERITY_TRIVIAL, 'Trivial'),
+        (SEVERITY_CRITICAL, 'Critical'),
+    )
+
+    severity = models.SmallIntegerField('severity',
+                                        choices=SEVERITY_CHOICES,
+                                        default=SEVERITY_MEDIUM)
+
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='owner')
 
     # Date the bug was created.

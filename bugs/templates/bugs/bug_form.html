@@ -3,7 +3,7 @@
 {% block content %}
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
-            <form id="bug-form" method="post" action="{% url 'bugs:create' %}">
+            <form id="bug-form" method="post">
                 {% csrf_token %}
 
                 <fieldset class="form-group {% if form.title.errors %}has-error{% endif %}">
@@ -20,6 +20,14 @@
                     </label>
                     {{ form.description }}
                     {{ form.description.errors }}
+                </fieldset>
+
+                <fieldset class="form-group {% if form.severity.errors %}has-error{% endif %}">
+                    <label for="{{ form.severity.id_for_label }}" class="control-label">
+                        {{ form.severity.label }}
+                    </label>
+                    {{ form.severity }}
+                    {{ form.severity.errors }}
                 </fieldset>
 
                 <fieldset class="form-group {% if form.state.errors %}has-error{% endif %}">

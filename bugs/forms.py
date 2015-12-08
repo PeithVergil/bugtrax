@@ -8,7 +8,7 @@ class BugForm(forms.ModelForm):
     class Meta:
         model = Bug
         fields = (
-            'title', 'description', 'state', 'owner'
+            'title', 'description', 'severity', 'state', 'owner'
         )
 
     def __init__(self, *args, **kwargs):
