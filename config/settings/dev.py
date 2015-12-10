@@ -3,7 +3,7 @@ Only use this setting for the development environment.
 
 .. Usage::
 
-    python manage.py runserver --settings=config.settings
+    python manage.py runserver --settings=config.settings.dev
 """
 
 from .base import *
