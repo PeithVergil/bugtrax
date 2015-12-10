@@ -33,6 +33,6 @@ server {
         proxy_read_timeout    300;
     }
 
-    access_log /home/bugtrax/logs/nginx-access.log;
-    error_log /home/bugtrax/logs/nginx-error.log;
+    access_log /home/bugtrax/logs/nginx/access.log;
+    error_log /home/bugtrax/logs/nginx/error.log;
 }
