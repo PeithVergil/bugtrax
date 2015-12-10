@@ -13,7 +13,7 @@ upstream bugtrax {
 #
 server {
     listen      80 default_server;
-    server_name 45.55.143.189;
+    server_name 45.55.76.52;
 
     root /home/bugtrax/public/bugtrax;
 
