@@ -24,6 +24,16 @@ for template_engine in TEMPLATES:
 # Provide a different secret key in production.
 SECRET_KEY = 't#wk_i&_py2ck1#n42)_fnfxl_pol0n&n#jhuh60yh^!z6kg4e'
 
+# Database
+# https://docs.djangoproject.com/en/1.9/ref/settings/#databases
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': '/home/bugtrax/data/bugtrax.sqlite3',
+    }
+}
+
 ALLOWED_HOSTS = [
     'bugtrax.com', 'www.bugtrax.org'
 ]
