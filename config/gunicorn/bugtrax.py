@@ -1,7 +1,6 @@
 bind = '127.0.0.1:8000'
-user = 'peith'
-group = 'peith'
+user = 'bugtrax'
+group = 'bugtrax'
 workers = 3
-loglevel = 'error'
-errorlog = '/home/peith/logs/bugtrax_gunicorn_errorlog'
-accesslog = '/home/peith/logs/bugtrax_gunicorn_accesslog'
+errorlog = '/home/bugtrax/logs/bugtrax_gunicorn_error.log'
+accesslog = '/home/bugtrax/logs/bugtrax_gunicorn_access.log'
